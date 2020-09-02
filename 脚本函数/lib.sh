@@ -19,3 +19,9 @@ div() {
         echo -1
     fi
 }
+
+printDate() {
+    c_time=`date +%Y/%m/%d-%H:%M:%S`
+    echo "===Current Time is :$c_time ==="
+
+}

@@ -2,8 +2,13 @@
 
 # 装载其它脚本
 source lib.sh
-
+echo "===Before calculation :==="
+printDate
 echo "20 + 10 = $(add 20 10)"
 echo "20 - 10 = $(sub 20 10)"
 echo "20 * 10 = $(mul 20 10)"
 echo "20 / 10 = $(div 20 10)"
+
+echo "3 + 3 = $(add 3 3)"
+echo "===After calculation :==="
+printDate
