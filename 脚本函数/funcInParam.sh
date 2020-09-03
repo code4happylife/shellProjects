@@ -16,9 +16,19 @@ else
 	echo "第二个参数为空"
 fi
 
+z=0
+if [[ -n $3 ]]; then
+        echo "第三个参数为: $3"
+        z=$3
+else
+        echo "第三个参数为空"
+fi
+
+
 paramsFunction() {
 	echo "函数第一个入参：$1"
 	echo "函数第二个入参：$2"
+        echo "函数第三个入参：$3"
 }
 
-paramsFunction ${x} ${y}
+paramsFunction $x $y $z
