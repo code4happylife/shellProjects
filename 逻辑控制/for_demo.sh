@@ -17,6 +17,10 @@ done
 #  7
 #  8
 #  9
+echo "print 1 to 100"
+for ((i=1; i<=100; i++));do
+    echo ${i}
+done
 
 ################### for in 语句 ###################
 echo "print 1 to 5"
@@ -30,7 +34,11 @@ done
 #  3
 #  4
 #  5
-
+echo "print 20 to 25"
+for j in {20..25};do
+	echo ${j};
+	echo "====="
+done
 ################### for in 语句遍历文件 ###################
 DIR=/home/zp
 for FILE in ${DIR}/*.sh; do
@@ -50,8 +58,17 @@ do
 	echo "Starting loop $x:"
 	for (( y = 1; y <= 3; y ++ ))
 	do
-		echo "Inside loog: $y:"
+		echo "Inside loop: $y:"
 	done
+done
+
+for (( a = 1; a <= 6; a ++ ))
+do
+	for (( b = 1; b <= 10; b++ ))
+	do
+		echo -n "*"
+	done
+	echo
 done
 #Output
 #Starting loop 1:
