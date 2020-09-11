@@ -17,3 +17,8 @@ for state in `cat $file`
 do
 	echo "Visit beautiful $state"
 done
+
+for state in `cat $file`
+do
+	echo "Find the state $state"
+done

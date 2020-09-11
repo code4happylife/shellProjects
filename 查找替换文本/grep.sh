@@ -6,3 +6,4 @@
 file=$1
 keyword=$2
 strings ${file} | grep ${keyword}
+tail -F ${file} | grep ${keyword}

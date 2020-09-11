@@ -6,6 +6,13 @@ while [[ ${x} -lt 10 ]]; do
 	echo $((x * x))
 	x=$((x + 1))
 done
+
+# also mutiply three times
+y=0
+while [[ ${y} -lt 10 ]];do
+	echo $((y * y * y ))
+        y=$((y + 1))
+done
 #  Output:
 #  0
 #  1
@@ -24,6 +31,14 @@ while echo ${x}
 [[ ${x} -lt 9 ]]
 do
 	x=$((x + 1))
+done
+
+#can also like this
+y=0
+while [[ ${y} -lt 10 ]];do
+	echo "===###==="
+	echo ${y}
+	y=$(( y + 1 ))
 done
 #	Output:
 #	0
@@ -48,4 +63,18 @@ do
 		echo "Inner loop: $x * $y = $z"
 	done
 	x=$[ $x - 1 ]
+done
+
+#print out some stars
+row=10
+while [[ $row -gt 0 ]]
+do
+	for(( cols=1; $cols < 11; cols ++ ))
+	do
+		num=$[ $row * $cols   ]
+		echo -n "*"
+	done
+	echo $num
+	echo
+	row=$[ $row - 1 ] 
 done
