@@ -9,5 +9,7 @@ date
 echo The one who has been logged is:
 who
 
-
-
+date_time=`date +%Y%m%d-%H%M%S`
+echo "The time now is $date_time"
+people=`who`
+echo "The one who has been logged is:$people"
