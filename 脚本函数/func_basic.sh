@@ -14,4 +14,21 @@ do
 done
 echo "This is the end of the loop"
 func1
+
+function test_func()
+{
+	date_time=$(date +%Y-%m-%d-%H:%M:%S)
+	echo "This is a funciton demo in bash, executed at $date_time"
+}
+iter=1
+while [ $iter -le 6 ]
+do
+	test_func
+	iter=$[ $iter + 1 ]
+done
+
+echo "This is the end of the loop"
+test_func
+echo "Finish !"
+
 echo "Now this is the end of the script"
