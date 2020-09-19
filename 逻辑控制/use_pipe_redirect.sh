@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # redirecting the for output to a file
-for file in /home/tiandi/*
+for file in /etc/*
 do
 	if [ -d "$file" ]
 	then
@@ -13,7 +13,7 @@ done > output.txt
 
 # piping a loop to another command
 
-for state in "North Dakota" Connecticut
+for state in "North Dakota" Connecticut "Mars"
 do
 	echo "$state is next place to go"
 done | sort

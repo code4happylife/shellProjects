@@ -7,8 +7,8 @@
 val1=baseball
 val2=hockey
 
-################### 错误使用大于小于号 ##################
-if [[ $val1 > $val2 ]]
+################### 使用-gt 表示大于号 ##################
+if [[ $val1 -gt $val2 ]]
 then
 	echo "$val1 is greater than $val2"
 else
@@ -16,9 +16,19 @@ else
 fi
 
 ################### 正确使用大于小于号 ###################
-if [[ $val1 \> $val2 ]]
+if [[ $val1 -gt $val2 ]]
 then
 	echo "$val1 is greater than $val2"
 else
 	echo "$val1 is less than $val2"
+fi
+
+################### test gt lt operator #################
+a=77
+b=5
+if [[ $a -gt $b ]]
+then
+	echo "$a is greater than $b"
+else
+	echo "$a is less than $b"
 fi
