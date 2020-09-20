@@ -11,7 +11,14 @@ func1() {
 echo "testing the function"
 func1
 echo "The exit status is : $?"
+function test(){
+	echo "Trying another non-existenct file"
+	ls -l non_exist
+}
 
+echo "testing the test function"
+test
+echo "The exit status is :$?"
 func2() {
 	ls -l badfile
 	echo "Another test to display a non-existent file"
@@ -22,8 +29,14 @@ echo "Another test"
 func2
 echo "The exit status is : $?"
 
+function test1(){
+	ls -l not_existence
+	echo "Another new test to display a non_existence file "
 
-
+}
+echo "Another new test"
+test1
+echo "The exit status is : $?"
 
 
 

@@ -12,7 +12,7 @@ function arraydblr {
 	elements=$[ $# - 1 ]
 	for (( i = 0; i <= $elements; i ++ ))
 	{
-		newarray [ $i ] = $[ ${origarry[$i]} * 2 ]
+		newarray[ $i ] = $[ ${origarry[$i]} * 2 ]
 	}
 
 	echo ${newarray[*]}
