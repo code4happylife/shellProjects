@@ -10,3 +10,5 @@ function db1 {
 result=`db1`
 echo "The new value is $result"
 
+# echo value is return value
+
