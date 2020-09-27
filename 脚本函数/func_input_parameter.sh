@@ -6,11 +6,16 @@ runner() {
 
 name=zp
 paramsFunction() {
+	#$1 is the first parameter.
 	echo "函数第一个入参：$1"
+	#$2 is the second parameter
 	echo "函数第二个入参：$2"
+	#$# is the number of parameter
 	echo "传递到脚本的参数个数：$#"
+	#$* is all the parameter
 	echo "所有参数："
 	printf "+ %s\n" "$*"
+	#$$ is the id.
 	echo "脚本运行的当前进程 ID 号：$$"
 	echo "后台运行的最后一个进程的 ID 号：$!"
 	echo "所有参数："
