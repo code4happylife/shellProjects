@@ -1,6 +1,6 @@
 #!/usr/bin/expect
 set user "root"
-set password "4G/x5nP;h`:Bk"
+set password "qwer1234"
 set host    "127.0.0.1"
 
 #spawn will start a new process,such as ssh
