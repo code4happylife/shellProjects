@@ -10,11 +10,17 @@ if [[ -n $2 ]]; then
 	y=$2
 fi
 
-echo "x=${x}, y=${y}"
+z=30
+if [[ -n $3 ]]; then
+	z=$3
+fi
+
+echo "x=${x}, y=${y},z=${z}"
 
 val=`expr ${x} + ${y}`
 echo "${x} + ${y} = $val"
-
+val=`expr ${x} + ${z}`
+echo "${x} + ${z} = ${val}"
 val=`expr ${x} - ${y}`
 echo "${x} - ${y} = $val"
 
@@ -33,7 +39,12 @@ fi
 if [[ ${x} != ${y} ]]; then
 	echo "${x} != ${y}"
 fi
-
+if [[ ${x} == ${z} ]];then
+	echo "${x} = ${z}"
+fi
+if [[ ${x} != ${z} ]];then
+	echo "${x} != ${z}"
+fi
 #  Execute: ./算术运算符.sh
 #  Output:
 #  x=10, y=20
