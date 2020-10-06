@@ -13,6 +13,6 @@ exec 3>&-
 
 echo "Done creating temp file. The contents are:"
 cat ${tempFile}
-
-rm -f ${tempFile} 2> /dev/null
+#remove the temp file
+#rm -f ${tempFile} 2> /dev/null
 
