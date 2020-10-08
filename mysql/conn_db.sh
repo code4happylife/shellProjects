@@ -3,10 +3,10 @@
 #连接数据库
 mysql=`which mysql`
 #发送单个命令
-$mysql emwjs -u test -e "show databases;"
+$mysql information_schema -u root -e "show databases;"
 
 #发送多个命令
-$mysql emwjs -u test << EOF
+$mysql information_schema -u root << EOF
 show tables;
-select * from em_admin;
+select * from INNODB_SYS_TABLES;
 EOF
