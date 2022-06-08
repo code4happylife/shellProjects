@@ -2,9 +2,11 @@
 :<<EOF
 打印金字塔
 EOF
-level=$1
-if [[ !'$level' ]];then
+# 判断命令行参数是否为空
+if [[ $1 == '' ]];then
         level=3
+else
+        level=$1
 fi
 for (( i=1;i<=$level;i++ ))
 do
